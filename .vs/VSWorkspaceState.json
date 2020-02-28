@@ -2,11 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\client",
-    "\\client\\src",
     "\\server-express",
-    "\\server-express\\models",
-    "\\server-express\\routes"
+    "\\server-express\\models"
   ],
-  "SelectedNode": "\\server-express\\server.js",
+  "SelectedNode": "\\client\\package.json",
   "PreviewInSolutionExplorer": false
 }
