@@ -1,11 +1,12 @@
 {
   "ExpandedNodes": [
     "",
+    "\\client",
+    "\\client\\public",
     "\\client\\src",
-    "\\server-express\\models",
-    "\\server-express\\routes",
-    "\\server-flask\\app"
+    "\\server-aspnet",
+    "\\server-aspnet\\Controllers"
   ],
-  "SelectedNode": "\\client",
+  "SelectedNode": "\\server-aspnet\\server-aspnet.sln",
   "PreviewInSolutionExplorer": false
 }
