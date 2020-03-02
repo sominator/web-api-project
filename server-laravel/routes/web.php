@@ -14,3 +14,11 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::prefix('quests')->group(function () {
+    Route::get('', 'QuestController@index');
+    Route::post('', 'QuestController@store');
+    Route::get('{quest}', 'QuestController@show');
+    Route::put('{quest}', 'QuestController@update');
+    Route::delete('{quest}', 'QuestController@destroy');
+});

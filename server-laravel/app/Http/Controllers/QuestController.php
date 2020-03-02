@@ -14,7 +14,7 @@ class QuestController extends Controller
      */
     public function index()
     {
-        //
+        return response()->json(Quest::all(), 200);
     }
 
     /**
@@ -25,7 +25,10 @@ class QuestController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $quest = new Quest($request->all());
+        $quest->save();
+
+        return response()->json($quest, 201);
     }
 
     /**
@@ -36,7 +39,7 @@ class QuestController extends Controller
      */
     public function show(Quest $quest)
     {
-        //
+        return response()->json($quest, 200);
     }
 
     /**
@@ -48,7 +51,10 @@ class QuestController extends Controller
      */
     public function update(Request $request, Quest $quest)
     {
-        //
+        $quest->fill($request->all());
+        $quest->update();
+
+        return response()->json($quest, 200);
     }
 
     /**
@@ -59,6 +65,7 @@ class QuestController extends Controller
      */
     public function destroy(Quest $quest)
     {
-        //
+        $quest->delete();
+        return response()->json('', 204);
     }
 }

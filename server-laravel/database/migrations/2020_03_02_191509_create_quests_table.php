@@ -16,6 +16,10 @@ class CreateQuestsTable extends Migration
         Schema::create('quests', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->timestamps();
+            $table->string('name');
+            $table->text('description')->nullable();
+            $table->index('name');
+            $table->index('description');
         });
     }
 
